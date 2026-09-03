@@ -1,0 +1,733 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #071a44;
+  --navy-2: #0b255f;
+  --blue: #0d56b3;
+  --royal: #0d6efd;
+  --orange: #ff6500;
+  --red: #db1313;
+  --green: #198754;
+  --ink: #162033;
+  --muted: #677083;
+  --paper: #f8f9fa;
+  --line: #dee2e6;
+  --white: #ffffff;
+  --steel: #e9eef5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.site-shell {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, rgba(13, 110, 253, 0.06), transparent 28rem),
+    var(--white);
+}
+
+.topline {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  color: var(--white);
+  background: var(--orange);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.topline a:last-child {
+  margin-left: 0.5rem;
+}
+
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(7, 26, 68, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1180px, calc(100% - 2rem));
+  min-height: 76px;
+  margin: 0 auto;
+  gap: 1.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 184px;
+}
+
+.brand img {
+  width: 180px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.nav-links a {
+  padding: 1.6rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--white);
+  border-color: var(--orange);
+}
+
+.nav-cta,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.nav-cta,
+.button.primary {
+  color: var(--white);
+  background: var(--orange);
+  box-shadow: 0 18px 40px rgba(255, 101, 0, 0.22);
+}
+
+.button.secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.button:hover,
+.button:focus-visible,
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  transform: translateY(-2px);
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 74svh;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(7, 26, 68, 0.96) 0%, rgba(7, 26, 68, 0.82) 38%, rgba(7, 26, 68, 0.22) 72%),
+    linear-gradient(180deg, rgba(7, 26, 68, 0.28), rgba(7, 26, 68, 0.62)),
+    url("/morven/marine-coating.jpg") center / cover no-repeat;
+}
+
+.hero::after {
+  position: absolute;
+  right: -6rem;
+  bottom: 0;
+  width: 44vw;
+  height: 10px;
+  background: var(--orange);
+  content: "";
+  transform: skewX(-26deg);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 5rem 0 4.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.eyebrow.dark {
+  color: var(--blue);
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: 4.9rem;
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.hero-copy {
+  max-width: 650px;
+  margin: 1.35rem 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.22rem;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 760px;
+  gap: 0.9rem;
+  margin-top: 3.25rem;
+}
+
+.hero-metrics div {
+  padding-top: 1rem;
+  border-top: 3px solid rgba(255, 255, 255, 0.28);
+}
+
+.hero-metrics strong {
+  display: block;
+  color: var(--white);
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.hero-metrics span {
+  display: block;
+  margin-top: 0.35rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.88rem;
+}
+
+.signal-band {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: var(--navy);
+  color: var(--white);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signal-band span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 800;
+  text-align: center;
+}
+
+.section,
+.intro {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 3rem;
+  align-items: end;
+  margin-bottom: 2.4rem;
+}
+
+.section-heading h2,
+.story-copy h2,
+.why h2,
+.contact h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 2.9rem;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.section-heading.light h2,
+.why h2,
+.contact h2 {
+  color: var(--white);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+.intro .section-heading {
+  display: block;
+  margin: 0;
+}
+
+.intro-copy p,
+.story-copy p,
+.why-copy p,
+.contact p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.proof-grid span,
+.why-grid span {
+  min-height: 56px;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--orange);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.image-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.75fr);
+  align-items: stretch;
+  background: var(--paper);
+}
+
+.image-story img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+}
+
+.story-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4.5rem;
+  background: var(--white);
+}
+
+.story-copy p:last-child {
+  margin-top: 1.2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  min-height: 238px;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(13, 110, 253, 0.05), transparent),
+    var(--white);
+}
+
+.service-card span {
+  color: var(--orange);
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.service-card h3,
+.product-card h3,
+.featured-card h3,
+.article-grid h3 {
+  margin: 1rem 0 0.6rem;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.service-card p,
+.product-card p,
+.article-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.product-section {
+  padding: 6rem 0;
+  background:
+    linear-gradient(135deg, rgba(13, 110, 253, 0.2), transparent 44%),
+    var(--navy);
+}
+
+.product-section .section-heading,
+.product-grid {
+  width: min(1180px, calc(100% - 2rem));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--steel);
+}
+
+.product-card div {
+  padding: 1.2rem;
+}
+
+.product-card span,
+.featured-card span,
+.article-grid span {
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.featured-card {
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.featured-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding: 1.5rem;
+  border-radius: 6px;
+  background: var(--paper);
+}
+
+.featured-card a {
+  display: inline-flex;
+  margin-top: 0.35rem;
+  color: var(--blue);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.why {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 4rem;
+  align-items: center;
+  padding: 6rem max(1rem, calc((100vw - 1180px) / 2));
+  background:
+    linear-gradient(90deg, rgba(7, 26, 68, 0.92), rgba(7, 26, 68, 0.74)),
+    url("/morven/fall-arrest.jpg") center / cover no-repeat;
+  color: var(--white);
+}
+
+.why-copy p,
+.contact p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.why-grid span {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.article-grid article {
+  min-height: 210px;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 101, 0, 0.07), transparent),
+    var(--white);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.6fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 5rem max(1rem, calc((100vw - 1180px) / 2));
+  background: var(--navy-2);
+  color: var(--white);
+}
+
+.contact-panel {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dark-button {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-panel > a:not(.button) {
+  color: var(--white);
+  font-weight: 800;
+}
+
+address {
+  color: rgba(255, 255, 255, 0.72);
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.3rem max(1rem, calc((100vw - 1180px) / 2));
+  background: #050f2a;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer img {
+  width: 170px;
+}
+
+.footer p {
+  max-width: 520px;
+  margin: 0;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--white);
+  font-weight: 800;
+}
+
+@media (max-width: 980px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 0.7rem 0;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 0;
+    white-space: nowrap;
+  }
+
+  .hero {
+    min-height: 70svh;
+    background-position: center right;
+  }
+
+  .hero h1 {
+    max-width: 620px;
+    font-size: 3.55rem;
+  }
+
+  .section-heading,
+  .intro,
+  .image-story,
+  .why,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    gap: 1rem;
+  }
+
+  .story-copy {
+    padding: 3rem 1.5rem;
+  }
+
+  .service-grid,
+  .product-grid,
+  .featured-grid,
+  .article-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .topline {
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .topline a:last-child {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .brand {
+    min-width: 148px;
+  }
+
+  .brand img {
+    width: 148px;
+  }
+
+  .nav-cta {
+    min-height: 42px;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  .hero {
+    min-height: 68svh;
+    background:
+      linear-gradient(180deg, rgba(7, 26, 68, 0.94), rgba(7, 26, 68, 0.78)),
+      url("/morven/marine-coating.jpg") center / cover no-repeat;
+  }
+
+  .hero-content {
+    padding: 4rem 0 3.5rem;
+  }
+
+  .hero h1,
+  .section-heading h2,
+  .story-copy h2,
+  .why h2,
+  .contact h2 {
+    font-size: 2.35rem;
+    line-height: 1.08;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .hero-metrics,
+  .signal-band,
+  .proof-grid,
+  .service-grid,
+  .product-grid,
+  .featured-grid,
+  .why-grid,
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-metrics {
+    margin-top: 2.2rem;
+  }
+
+  .signal-band span {
+    min-height: 56px;
+  }
+
+  .section,
+  .intro,
+  .product-section,
+  .featured {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .image-story img {
+    min-height: 330px;
+  }
+
+  .contact-panel {
+    padding: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
