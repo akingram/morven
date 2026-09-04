@@ -8,6 +8,7 @@
   --orange: #ff6500;
   --red: #db1313;
   --green: #198754;
+  --gold: #ffc107;
   --ink: #142033;
   --muted: #637084;
   --paper: #f8f9fa;
@@ -243,6 +244,24 @@ img {
   margin-top: 2rem;
 }
 
+.market-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.market-badges span {
+  min-height: 34px;
+  padding: 0.55rem 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
 .command-panel {
   position: relative;
   overflow: hidden;
@@ -283,6 +302,41 @@ img {
   display: grid;
   gap: 0.7rem;
   margin: 1.2rem 0;
+}
+
+.market-route {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+  margin-top: 1.15rem;
+}
+
+.market-route div {
+  padding: 0.95rem;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--navy);
+}
+
+.market-route span {
+  color: var(--orange);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.market-route strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.market-route p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .route-stack div {
@@ -356,6 +410,69 @@ img {
   width: min(1200px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 6.2rem 0;
+}
+
+.market-section {
+  padding-bottom: 0;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.market-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 270px;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(13, 110, 253, 0.06), transparent 58%),
+    var(--white);
+  box-shadow: var(--shadow);
+}
+
+.market-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 8px;
+  background: linear-gradient(90deg, var(--red) 0 33%, var(--gold) 33% 66%, var(--green) 66% 100%);
+  content: "";
+}
+
+.market-card:nth-child(2)::before {
+  background: linear-gradient(90deg, var(--green) 0 33%, var(--white) 33% 66%, var(--green) 66% 100%);
+}
+
+.market-card span {
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.market-card h3 {
+  margin: 1.3rem 0 0.35rem;
+  color: var(--navy);
+  font-size: 2.15rem;
+  line-height: 1;
+}
+
+.market-card strong {
+  display: block;
+  color: var(--blue);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.market-card p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
 }
 
 .intro {
@@ -931,6 +1048,7 @@ address {
   }
 
   .signal-band,
+  .market-grid,
   .proof-grid,
   .service-grid,
   .product-grid,

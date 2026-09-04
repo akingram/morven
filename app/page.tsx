@@ -2,32 +2,32 @@ const serviceLines = [
   {
     number: "01",
     title: "Engineering Services",
-    text: "Design, construction and maintenance support for oil and gas, power, manufacturing, marine and facility operations.",
+    text: "Design, construction and maintenance support for Ghanaian marine, power, manufacturing, oil and gas, and facility operations.",
   },
   {
     number: "02",
     title: "Procurement",
-    text: "Technical sourcing from reputable original equipment manufacturers with documentation, fit checks and delivery coordination.",
+    text: "Technical sourcing for Ghana-based requirements with Lagos/Apapa as a regional reference for marine and industrial supply.",
   },
   {
     number: "03",
     title: "Construction Management",
-    text: "Project execution oversight that protects schedules, budgets, safety standards and site communication.",
+    text: "Project execution oversight that protects schedules, budgets, safety standards and site communication across both markets.",
   },
   {
     number: "04",
     title: "Product Distribution",
-    text: "Industrial machinery, spare parts, tools, consumables and safety equipment supplied through one accountable desk.",
+    text: "Industrial machinery, spare parts, tools, consumables and safety equipment supplied through one accountable regional desk.",
   },
   {
     number: "05",
     title: "IT Solutions",
-    text: "Industrial IT infrastructure, systems integration and technology support for modern operational teams.",
+    text: "Industrial IT infrastructure, systems integration and technology support for modern operational teams in Ghana and Nigeria.",
   },
   {
     number: "06",
     title: "Marine Solutions",
-    text: "Coatings, chemicals, maintenance materials and equipment for vessels, ports and marine-facing assets.",
+    text: "Coatings, chemicals, maintenance materials and equipment for Tema, Takoradi, Lagos and other marine-facing assets.",
   },
 ];
 
@@ -36,25 +36,25 @@ const productLanes = [
     title: "Protective Coatings",
     image: "/morven/flooring-coating.jpg",
     label: "Marine, epoxy, anti-rust",
-    text: "Coating systems for steel, floors, vessels and coastal structures exposed to corrosion, saltwater and abrasion.",
+    text: "Coating systems for steel, floors, vessels and coastal structures in Ghana, with Lagos/Apapa as a proven reference environment.",
   },
   {
     title: "Safety & Fall Protection",
     image: "/morven/fall-arrest.jpg",
     label: "PPE, anchors, rescue",
-    text: "PPE, fall arrest systems, anchor accessories and safety essentials for high-risk industrial sites.",
+    text: "PPE, fall arrest systems, anchor accessories and safety essentials for industrial projects from Accra to Lagos.",
   },
   {
     title: "Traffic Safety",
     image: "/morven/thermoplastic-road-marking.jpg",
     label: "Road marking systems",
-    text: "Thermoplastic road paint, barriers, signs and reflective safety products for road and facility projects.",
+    text: "Thermoplastic road paint, barriers, signs and reflective products for Ghanaian road, facility and logistics projects.",
   },
   {
     title: "Industrial Chemicals",
     image: "/morven/chlorinated-rubber-resin.jpg",
     label: "Resins and process supply",
-    text: "Specialist resins, solvents, maintenance chemicals, lubricants and process materials for demanding applications.",
+    text: "Specialist resins, solvents, maintenance chemicals, lubricants and process materials for Ghana and Nigeria operations.",
   },
 ];
 
@@ -76,42 +76,59 @@ const featuredProducts = [
   },
 ];
 
+const marketCards = [
+  {
+    country: "Ghana",
+    role: "Lead market focus",
+    places: "Accra / Tema / Takoradi / Kumasi",
+    text: "Industrial supply, coatings, chemicals, safety products and marine support for Ghana's port, energy, construction and manufacturing corridors.",
+  },
+  {
+    country: "Nigeria",
+    role: "Regional reference hub",
+    places: "Lagos / Apapa",
+    text: "The existing Morven Lagos/Apapa reference point stays visible for marine supply context, product benchmarking and Nigeria-linked procurement.",
+  },
+];
+
 const procurementSteps = [
-  "Send the product list, quantity and site location.",
+  "Send the product list, quantity and Ghana site location.",
+  "Add Lagos/Apapa reference details when the request is Nigeria-linked.",
   "Morven checks specifications, standards and brand equivalents.",
   "Quote, documentation and delivery route are confirmed.",
-  "Materials are supplied with responsive after-sales support.",
 ];
 
 const industries = [
-  "Marine & ports",
-  "Oil & gas",
-  "Power generation",
-  "Manufacturing",
-  "Road works",
-  "Facilities",
+  "Tema marine & ports",
+  "Takoradi oil & gas",
+  "Accra facilities",
+  "Kumasi manufacturing",
+  "Ghana road works",
+  "Mining support",
+  "Lagos/Apapa marine reference",
+  "Nigeria industrial supply",
 ];
 
 const proofPoints = [
+  "Ghana-first market positioning",
+  "Lagos/Apapa reference hub",
   "OEM-aligned sourcing",
-  "Safety-first delivery",
-  "West Africa reach",
   "Technical product support",
 ];
 
 const insightCards = [
-  "Coastal steel corrosion prevention",
-  "Saltwater and rapid corrosion in Nigeria",
-  "High-quality chlorinated rubber resin sourcing",
+  "Coastal steel corrosion in Ghana and Lagos",
+  "Marine coating selection for Tema and Apapa",
+  "Chemical and resin sourcing for West Africa",
 ];
 
 export default function Home() {
   return (
     <main className="site-shell">
       <div className="topline">
-        <span>Lagos, Nigeria</span>
+        <span>Ghana: Accra / Tema / Takoradi</span>
+        <span>Nigeria reference: Lagos / Apapa</span>
         <a href="tel:+2349129659392">+234 912 965 9392</a>
-        <a href="tel:+2348144536538">+234 814 453 6538</a>
         <a href="mailto:sales@morvenindustrial.org">
           sales@morvenindustrial.org
         </a>
@@ -123,9 +140,9 @@ export default function Home() {
             <img src="/morven/logo.png" alt="Morven Industrial Limited" />
           </a>
           <div className="nav-links">
+            <a href="#markets">Markets</a>
             <a href="#capabilities">Capabilities</a>
             <a href="#products">Products</a>
-            <a href="#industries">Industries</a>
             <a href="#rfq">RFQ</a>
           </div>
           <a className="nav-cta" href="https://wa.me/2349129659392">
@@ -137,27 +154,46 @@ export default function Home() {
       <section className="hero" id="top" aria-label="Morven Industrial Limited">
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">EPC / protective coatings / industrial supply</p>
+            <p className="eyebrow">
+              Ghana-focused EPC / Lagos reference supply hub
+            </p>
             <h1>Morven Industrial Limited</h1>
             <p className="hero-lede">
-              One accountable partner for engineering support, procurement,
-              marine coatings, chemicals, PPE and industrial equipment across
-              Nigeria and West Africa.
+              Industrial procurement, protective coatings, chemicals, marine
+              products, PPE and equipment for Ghana, with Lagos and Apapa kept
+              as the regional Nigeria reference point.
             </p>
             <div className="hero-actions">
               <a className="button primary" href="#rfq">
-                Start an RFQ
+                Start a Ghana RFQ
               </a>
-              <a className="button secondary" href="#products">
-                View Supply Lanes
+              <a className="button secondary" href="#markets">
+                View Market Coverage
               </a>
+            </div>
+            <div className="market-badges" aria-label="Regional market focus">
+              <span>Ghana lead market</span>
+              <span>Accra / Tema / Takoradi</span>
+              <span>Lagos / Apapa reference</span>
             </div>
           </div>
 
-          <aside className="command-panel" aria-label="Morven procurement desk">
+          <aside className="command-panel" aria-label="Morven regional desk">
             <div className="panel-header">
-              <span>Procurement desk</span>
+              <span>Regional desk</span>
               <strong>Ready</strong>
+            </div>
+            <div className="market-route">
+              <div>
+                <span>Lead</span>
+                <strong>Ghana</strong>
+                <p>Accra, Tema, Takoradi and Kumasi</p>
+              </div>
+              <div>
+                <span>Reference</span>
+                <strong>Lagos</strong>
+                <p>Apapa marine and industrial supply context</p>
+              </div>
             </div>
             <div className="route-stack">
               {["Specification", "Sourcing", "Quote", "Delivery"].map((item) => (
@@ -168,8 +204,8 @@ export default function Home() {
               ))}
             </div>
             <div className="panel-note">
-              <strong>24 hr</strong>
-              <span>RFQ response focus for clear product lists</span>
+              <strong>2 markets</strong>
+              <span>Ghana orientation with Nigeria/Lagos reference continuity</span>
             </div>
           </aside>
         </div>
@@ -177,28 +213,51 @@ export default function Home() {
 
       <section className="signal-band" aria-label="Morven supply categories">
         {[
+          "Ghana supply desk",
+          "Tema & Takoradi",
+          "Lagos reference hub",
           "Protective coatings",
-          "Marine chemicals",
-          "PPE & safety",
           "Industrial equipment",
-          "Traffic safety",
         ].map((item) => (
           <span key={item}>{item}</span>
         ))}
       </section>
 
+      <section className="market-section section" id="markets">
+        <div className="split-heading">
+          <div>
+            <p className="eyebrow dark">Market coverage</p>
+            <h2>Ghana leads the story. Lagos anchors the regional reference.</h2>
+          </div>
+          <p>
+            The page now speaks first to Ghanaian buyers while preserving
+            Morven's Lagos/Apapa connection for Nigeria-linked procurement,
+            marine operations and cross-border industrial supply context.
+          </p>
+        </div>
+        <div className="market-grid">
+          {marketCards.map((market) => (
+            <article className="market-card" key={market.country}>
+              <span>{market.role}</span>
+              <h3>{market.country}</h3>
+              <strong>{market.places}</strong>
+              <p>{market.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="intro section">
         <div className="section-kicker">
           <p className="eyebrow dark">Built for operational pressure</p>
-          <h2>Industrial buyers do not need more noise. They need certainty.</h2>
+          <h2>Industrial buyers in Ghana need certainty, not noise.</h2>
         </div>
         <div className="intro-copy">
           <p>
-            Morven Industrial Limited supports teams that need the right product,
-            the right documentation and the right delivery path. The company
-            brings engineering discipline to industrial distribution, helping
-            customers source durable materials for sites where downtime is
-            expensive.
+            Morven Industrial Limited supports Ghanaian teams that need the
+            right product, the right documentation and the right delivery path.
+            Lagos remains a visible reference point for Nigeria-based supply,
+            marine context and regional procurement continuity.
           </p>
           <div className="proof-grid">
             {proofPoints.map((point) => (
@@ -217,12 +276,13 @@ export default function Home() {
         </div>
         <div className="story-copy">
           <p className="eyebrow">Supply without guesswork</p>
-          <h2>From coating systems to critical spares, Morven keeps the job moving.</h2>
+          <h2>From Ghana site requirements to Lagos reference specs.</h2>
           <p>
             The work starts with understanding application conditions, site
             urgency, standards and brand preference. From there, Morven helps
-            identify the right materials and coordinates supply with practical
-            communication from first quote to after-sales support.
+            identify the right materials and coordinates supply for Ghanaian
+            industrial projects while keeping Lagos/Apapa available as a
+            practical Nigeria reference.
           </p>
         </div>
       </section>
@@ -235,8 +295,8 @@ export default function Home() {
           </div>
           <p>
             Morven operates across service, procurement and distribution, so
-            industrial teams can reduce vendor fragmentation and move from need
-            to delivery faster.
+            industrial teams in Ghana and Nigeria can reduce vendor
+            fragmentation and move from need to delivery faster.
           </p>
         </div>
         <div className="service-grid">
@@ -255,12 +315,12 @@ export default function Home() {
           <div className="split-heading light">
             <div>
               <p className="eyebrow">Supply lanes</p>
-              <h2>Critical industrial categories, presented with clarity.</h2>
+              <h2>Critical industrial categories for Ghana, backed by Lagos context.</h2>
             </div>
             <p>
-              Buyers can start with a category or send an exact item list. Each
-              lane is built around technical fit, durability and accountable
-              sourcing.
+              Buyers can start with a Ghana category, a Lagos reference item or
+              an exact product list. Each lane is built around technical fit,
+              durability and accountable sourcing.
             </p>
           </div>
         </div>
@@ -283,7 +343,7 @@ export default function Home() {
         <div className="split-heading">
           <div>
             <p className="eyebrow dark">Fast-moving stock</p>
-            <h2>Popular requests, ready for quote conversations.</h2>
+            <h2>Popular requests for Ghanaian buyers and Nigeria-linked projects.</h2>
           </div>
           <p>
             Morven can help source lubricants, transformer oils, fall protection
@@ -308,7 +368,7 @@ export default function Home() {
         <div className="section industry-grid">
           <div>
             <p className="eyebrow">Sectors served</p>
-            <h2>Built around the realities of West African industry.</h2>
+            <h2>Built around Ghana's industrial corridors and Lagos reference demand.</h2>
           </div>
           <div className="industry-list">
             {industries.map((industry) => (
@@ -322,11 +382,11 @@ export default function Home() {
         <div className="split-heading">
           <div>
             <p className="eyebrow dark">How supply moves</p>
-            <h2>A cleaner path from requirement to delivery.</h2>
+            <h2>A cleaner path from Ghana requirement to regional delivery.</h2>
           </div>
           <p>
-            This is the simplest way to brief Morven when speed and accuracy
-            matter.
+            This is the simplest way to brief Morven when Ghana is the target
+            market and Lagos is part of the reference or comparison.
           </p>
         </div>
         <div className="process-grid">
@@ -343,11 +403,11 @@ export default function Home() {
         <div className="split-heading">
           <div>
             <p className="eyebrow dark">Knowledge center</p>
-            <h2>Buyer guidance for harsher environments.</h2>
+            <h2>Buyer guidance for Ghana and Lagos coastal conditions.</h2>
           </div>
           <p>
             Practical insight for teams buying coatings, chemicals and safety
-            products in coastal, heavy-duty and high-compliance conditions.
+            products in coastal, heavy-duty and high-compliance environments.
           </p>
         </div>
         <div className="insight-grid">
@@ -356,8 +416,8 @@ export default function Home() {
               <span>0{index + 1}</span>
               <h3>{article}</h3>
               <p>
-                Helpful context for choosing products that hold up in demanding
-                Nigerian industrial environments.
+                Helpful context for choosing products that hold up across
+                Ghanaian and Nigerian industrial environments.
               </p>
             </article>
           ))}
@@ -367,11 +427,11 @@ export default function Home() {
       <section className="rfq" id="rfq">
         <div className="rfq-copy">
           <p className="eyebrow">Talk to a specialist</p>
-          <h2>Send the list. Morven will help source it.</h2>
+          <h2>Send the Ghana list. Add Lagos reference details when needed.</h2>
           <p>
             Include product names, quantities, preferred brands, technical
-            standards, delivery location and urgency. The team can respond by
-            WhatsApp, phone or email.
+            standards, Ghana delivery location and urgency. For Nigeria-linked
+            requests, include Lagos or Apapa reference details.
           </p>
         </div>
         <div className="rfq-panel">
@@ -380,10 +440,10 @@ export default function Home() {
             <span>Best response when your list includes:</span>
           </div>
           <ul>
-            <li>Item description and quantity</li>
+            <li>Ghana site city, delivery point and deadline</li>
+            <li>Lagos/Apapa reference item when applicable</li>
             <li>Brand, model or acceptable equivalent</li>
-            <li>Delivery city and deadline</li>
-            <li>Application or site condition</li>
+            <li>Application, standard or site condition</li>
           </ul>
           <div className="rfq-actions">
             <a className="button primary" href="https://wa.me/2349129659392">
@@ -397,6 +457,7 @@ export default function Home() {
             sales@morvenindustrial.org
           </a>
           <address>
+            Ghana coverage: Accra, Tema, Takoradi and Kumasi. Nigeria reference:
             No 6, Alhaji Yusuf Adebayo, Olodi, by Coconut Market, Apapa, Lagos.
           </address>
         </div>
@@ -405,8 +466,8 @@ export default function Home() {
       <footer className="footer">
         <img src="/morven/logo.png" alt="Morven Industrial Limited" />
         <p>
-          Protective coatings, chemicals, marine supplies, PPE and industrial
-          equipment for West Africa.
+          Ghana-focused protective coatings, chemicals, marine supplies, PPE and
+          industrial equipment with Lagos/Apapa as Nigeria reference.
         </p>
         <a href="https://morvenindustrial.org/">morvenindustrial.org</a>
       </footer>

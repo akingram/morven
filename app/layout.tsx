@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const title = "Morven Industrial Limited";
 const description =
-  "Engineering, procurement, protective coatings, chemicals, marine supplies, PPE and industrial equipment across Nigeria and West Africa.";
+  "Ghana-focused engineering, procurement, protective coatings, chemicals, marine supplies, PPE and industrial equipment with Lagos/Apapa as Nigeria reference.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
