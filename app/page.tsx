@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const serviceLines = [
   {
     number: "01",
@@ -137,7 +139,13 @@ export default function Home() {
       <header className="nav-wrap">
         <nav className="nav" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="Morven Industrial home">
-            <img src="/morven/logo.png" alt="Morven Industrial Limited" />
+            <Image
+              src="/morven/logo.png"
+              alt="Morven Industrial Limited"
+              width={220}
+              height={70}
+              priority
+            />
           </a>
           <div className="nav-links">
             <a href="#markets">Markets</a>
@@ -231,7 +239,7 @@ export default function Home() {
           </div>
           <p>
             The page now speaks first to Ghanaian buyers while preserving
-            Morven's Lagos/Apapa connection for Nigeria-linked procurement,
+            Morven&apos;s Lagos/Apapa connection for Nigeria-linked procurement,
             marine operations and cross-border industrial supply context.
           </p>
         </div>
@@ -269,9 +277,12 @@ export default function Home() {
 
       <section className="story-band">
         <div className="story-image">
-          <img
+          <Image
             src="/morven/maintenance.png"
             alt="Industrial equipment maintenance and safety"
+            width={980}
+            height={720}
+            sizes="(max-width: 1040px) 100vw, 58vw"
           />
         </div>
         <div className="story-copy">
@@ -327,7 +338,13 @@ export default function Home() {
         <div className="product-grid">
           {productLanes.map((product) => (
             <article className="product-card" key={product.title}>
-              <img src={product.image} alt={product.title} />
+              <Image
+                src={product.image}
+                alt={product.title}
+                width={720}
+                height={540}
+                sizes="(max-width: 700px) 100vw, (max-width: 1040px) 50vw, 25vw"
+              />
               <div>
                 <span>{product.label}</span>
                 <h3>{product.title}</h3>
@@ -353,7 +370,13 @@ export default function Home() {
         <div className="featured-grid">
           {featuredProducts.map((product) => (
             <article className="featured-card" key={product.name}>
-              <img src={product.image} alt={product.name} />
+              <Image
+                src={product.image}
+                alt={product.name}
+                width={520}
+                height={520}
+                sizes="(max-width: 700px) 100vw, (max-width: 1040px) 50vw, 33vw"
+              />
               <span>{product.type}</span>
               <h3>{product.name}</h3>
               <a href="#rfq" aria-label={`Request quote for ${product.name}`}>
@@ -368,7 +391,10 @@ export default function Home() {
         <div className="section industry-grid">
           <div>
             <p className="eyebrow">Sectors served</p>
-            <h2>Built around Ghana's industrial corridors and Lagos reference demand.</h2>
+            <h2>
+              Built around Ghana&apos;s industrial corridors and Lagos reference
+              demand.
+            </h2>
           </div>
           <div className="industry-list">
             {industries.map((industry) => (
@@ -464,7 +490,12 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <img src="/morven/logo.png" alt="Morven Industrial Limited" />
+        <Image
+          src="/morven/logo.png"
+          alt="Morven Industrial Limited"
+          width={220}
+          height={70}
+        />
         <p>
           Ghana-focused protective coatings, chemicals, marine supplies, PPE and
           industrial equipment with Lagos/Apapa as Nigeria reference.
