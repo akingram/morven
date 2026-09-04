@@ -128,8 +128,8 @@ export default function Home() {
   return (
     <main className="site-shell">
       <div className="topline">
-        <span>Ghana: Accra / Tema / Takoradi</span>
-        <span>Nigeria reference: Lagos / Apapa</span>
+        <span>Ghana: Accra/Tema/Takoradi</span>
+        <span>Lagos/Apapa</span>
         <a href="tel:+2349129659392">+234 912 965 9392</a>
         <a href="mailto:sales@morvenindustrial.org">
           sales@morvenindustrial.org
@@ -180,9 +180,9 @@ export default function Home() {
               </a>
             </div>
             <div className="market-badges" aria-label="Regional market focus">
-              <span>Ghana lead market</span>
-              <span>Accra / Tema / Takoradi</span>
-              <span>Lagos / Apapa reference</span>
+              <span>Ghana lead</span>
+              <span>Tema/Takoradi</span>
+              <span>Lagos ref</span>
             </div>
           </div>
 
