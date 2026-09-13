@@ -1,6 +1,6 @@
 # Morven Industrial Landing Page
 
-A Ghana-oriented landing page for Morven Industrial Limited, with Lagos/Nigeria included as a regional reference point.
+A Ghana-oriented landing page for Morven Industrial Limited, focused on Marine Paint & Protective Coatings and Cleaning & Maintenance Chemicals, with Lagos/Nigeria included as a regional reference point.
 
 ## Prerequisites
 

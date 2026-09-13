@@ -643,6 +643,7 @@ img {
 
 .service-card p,
 .product-card p,
+.featured-card p,
 .insight-grid p {
   margin: 0;
   color: var(--muted);
@@ -709,6 +710,10 @@ img {
   color: var(--blue);
   font-size: 0.9rem;
   font-weight: 900;
+}
+
+.featured-card p {
+  min-height: 78px;
 }
 
 .featured-grid {
@@ -885,6 +890,18 @@ address {
 }
 
 .rfq-panel > a:not(.button) {
+  color: var(--white);
+  font-weight: 900;
+}
+
+.contact-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  margin-top: 1.2rem;
+}
+
+.contact-lines a {
   color: var(--white);
   font-weight: 900;
 }
@@ -1216,6 +1233,7 @@ address {
   .market-card p,
   .service-card p,
   .product-card p,
+  .featured-card p,
   .insight-grid p {
     font-size: 0.9rem;
     line-height: 1.58;
@@ -1281,8 +1299,19 @@ address {
   }
 
   .featured-card img {
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 4;
     padding: 0.75rem;
+  }
+
+  .featured-card p {
+    min-height: 0;
+  }
+
+  .contact-lines {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+    margin-top: 1rem;
   }
 
   .industry-grid {

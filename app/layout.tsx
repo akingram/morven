@@ -3,7 +3,7 @@ import "./globals.css";
 
 const title = "Morven Industrial Limited";
 const description =
-  "Ghana-focused engineering, procurement, protective coatings, chemicals, marine supplies, PPE and industrial equipment with Lagos/Apapa as Nigeria reference.";
+  "Marine paint, protective coatings, Unitor and Drew Marine cleaning chemicals for Ghana projects with Lagos/Apapa as Nigeria reference.";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   (process.env.VERCEL_URL
