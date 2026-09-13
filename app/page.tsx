@@ -124,6 +124,25 @@ const priorityCategories = [
   },
 ];
 
+const navCategoryGroups = [
+  {
+    title: "Marine Paint & Protective Coatings",
+    links: [
+      { name: "Sigma Marine Paint", href: categoryLinks.sigma },
+      { name: "International Marine Paint", href: categoryLinks.international },
+      { name: "Hempel Marine Paint", href: categoryLinks.hempel },
+      { name: "Jotun Marine Paint", href: categoryLinks.jotun },
+    ],
+  },
+  {
+    title: "Cleaning & Maintenance Chemicals",
+    links: [
+      { name: "Unitor Chemicals", href: categoryLinks.unitor },
+      { name: "Drew Marine Chemicals", href: categoryLinks.drew },
+    ],
+  },
+];
+
 const marketCards = [
   {
     country: "Ghana",
@@ -200,6 +219,21 @@ export default function Home() {
             <a href="#products">Products</a>
             <a href="#rfq">RFQ</a>
           </div>
+          <details className="category-menu">
+            <summary>Categories</summary>
+            <div className="category-dropdown">
+              {navCategoryGroups.map((group) => (
+                <div className="category-group" key={group.title}>
+                  <strong>{group.title}</strong>
+                  {group.links.map((link) => (
+                    <a href={link.href} key={link.name}>
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </details>
           <a className="nav-cta" href="https://wa.me/2349129659392">
             WhatsApp RFQ
           </a>
@@ -286,10 +320,9 @@ export default function Home() {
             <h2>Ghana leads demand. Lagos anchors the reference desk.</h2>
           </div>
           <p>
-            The page now pushes marine paint and protective coatings first,
+            Morven prioritizes marine paint and protective coatings first,
             then cleaning and maintenance chemicals, while keeping
-            Morven&apos;s Lagos/Apapa connection visible for Nigeria-linked
-            procurement.
+            Lagos/Apapa visible for Nigeria-linked procurement.
           </p>
         </div>
         <div className="market-grid">
@@ -378,9 +411,8 @@ export default function Home() {
               <h2>Push marine paint first. Keep cleaning chemicals close behind.</h2>
             </div>
             <p>
-              The landing page now gives the strongest space to Painting and
-              Protective Coating, followed by Cleaning and Maintenance
-              Chemicals for marine and heavy-industry users.
+              Start with Painting and Protective Coating, followed by Cleaning
+              and Maintenance Chemicals for marine and heavy-industry users.
             </p>
           </div>
         </div>
@@ -412,13 +444,13 @@ export default function Home() {
       >
         <div className="split-heading">
           <div>
-            <p className="eyebrow dark">Category catalog</p>
-            <h2>Six product categories to push across the page.</h2>
+            <p className="eyebrow dark">Product categories</p>
+            <h2>Marine coating and cleaning chemical lines ready for RFQ.</h2>
           </div>
           <p>
-            Each priority card points to the matching Morven category page and
-            keeps the sales conversation centered on marine paint, protective
-            coating and cleaning chemical supply.
+            Choose the brand category you need. Morven can help with
+            availability, equivalents, documentation and delivery for Ghana,
+            with Lagos/Apapa reference support when needed.
           </p>
         </div>
         <div className="featured-grid">
