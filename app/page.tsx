@@ -19,7 +19,7 @@ const serviceLines = [
   {
     number: "01",
     title: "Marine Paint Supply",
-    text: "Sigma, International, Hempel and Jotun marine coating categories positioned first for Ghanaian and Lagos-linked RFQs.",
+    text: "Sigma, International, Hempel and Jotun marine coating lines for Ghanaian projects and Lagos-linked procurement.",
   },
   {
     number: "02",
@@ -29,22 +29,22 @@ const serviceLines = [
   {
     number: "03",
     title: "Cleaning Chemical Procurement",
-    text: "Unitor and Drew Marine cleaning, maintenance, boiler, cooling-water and engine-room chemical requests handled clearly.",
+    text: "Unitor and Drew Marine cleaning, boiler, cooling-water and engine-room chemical requests handled with clear product guidance.",
   },
   {
     number: "04",
-    title: "Ghana Delivery Desk",
-    text: "Quotes can be shaped around Accra, Tema, Takoradi, Kumasi, port, offshore, facility and heavy-industry requirements.",
+    title: "Ghana Delivery Support",
+    text: "Quotes for Accra, Tema, Takoradi, Kumasi, port, offshore, facility and heavy-industry requirements.",
   },
   {
     number: "05",
     title: "Lagos / Apapa Reference",
-    text: "Nigeria reference details stay visible for product comparison, marine operations and Apapa-linked procurement context.",
+    text: "Nigeria reference details support product comparison, marine operations and Apapa-linked procurement.",
   },
   {
     number: "06",
     title: "Technical RFQ Support",
-    text: "Morven can receive brand names, product codes, equivalents, quantities, site conditions and urgent delivery timelines.",
+    text: "Share brand names, product codes, equivalents, quantities, site conditions and urgent delivery timelines.",
   },
 ];
 
@@ -52,30 +52,30 @@ const productLanes = [
   {
     title: "Marine Paint & Protective Coatings",
     image: "/morven/marine-coating.jpg",
-    label: "First priority category",
-    href: "#category-catalog",
+    label: "Marine coating systems",
+    href: "#categories",
     text: "Sigma, International, Hempel and Jotun systems for vessels, tanks, structural steel, terminals and coastal assets.",
   },
   {
     title: "Sigma & International Paint",
     image: "/morven/flooring-coating.jpg",
     label: "Primers, topcoats, linings",
-    href: "#category-catalog",
-    text: "High-performance coating requests for anti-corrosion, submerged surfaces, decks, tanks and offshore environments.",
+    href: "#categories",
+    text: "High-performance coatings for anti-corrosion, submerged surfaces, decks, tanks and offshore environments.",
   },
   {
     title: "Hempel & Jotun Paint",
     image: "/morven/chlorinated-rubber-resin.jpg",
     label: "Marine and industrial protection",
-    href: "#category-catalog",
+    href: "#categories",
     text: "Epoxy, polyurethane, mastic, primer and protective coating categories for repair, maintenance and new works.",
   },
   {
     title: "Cleaning & Maintenance Chemicals",
     image: "/morven/maintenance.png",
-    label: "Second priority category",
-    href: "#category-catalog",
-    text: "Unitor and Drew Marine categories for cleaning, degreasing, water treatment, tank cleaning and maintenance routines.",
+    label: "Cleaning chemical lines",
+    href: "#categories",
+    text: "Unitor and Drew Marine chemicals for cleaning, degreasing, water treatment, tank cleaning and maintenance routines.",
   },
 ];
 
@@ -85,7 +85,7 @@ const priorityCategories = [
     image: "/morven/marine-coating.jpg",
     type: "Painting & Protective Coating",
     href: categoryLinks.sigma,
-    text: "Anti-corrosives, low-VOC coatings, rust inhibitors, food-safe epoxy and PPG Sigma coating requests.",
+    text: "Anti-corrosives, low-VOC coatings, rust inhibitors, food-safe epoxy and PPG Sigma systems.",
   },
   {
     name: "International Marine Paint",
@@ -113,7 +113,7 @@ const priorityCategories = [
     image: "/morven/maintenance.png",
     type: "Cleaning & Maintenance Chemicals",
     href: categoryLinks.unitor,
-    text: "Multi Clean, Metal Brite, HP Wash, SeaClean Plus, water-treatment and onboard maintenance categories.",
+    text: "Multi Clean, Metal Brite, HP Wash, SeaClean Plus, water-treatment and onboard maintenance products.",
   },
   {
     name: "Drew Marine Chemicals",
@@ -146,23 +146,23 @@ const navCategoryGroups = [
 const marketCards = [
   {
     country: "Ghana",
-    role: "Lead market focus",
+    role: "Primary market",
     places: "Accra / Tema / Takoradi / Kumasi",
-    text: "Marine paint, protective coatings, Unitor/Drew chemicals and maintenance supply for Ghana's port, energy, construction and manufacturing corridors.",
+    text: "Marine paint, protective coatings, Unitor and Drew Marine chemicals for Ghana's port, energy, construction and manufacturing corridors.",
   },
   {
     country: "Nigeria",
-    role: "Regional reference hub",
+    role: "Regional support point",
     places: "Lagos / Apapa",
-    text: "The existing Morven Lagos/Apapa reference point stays visible for marine paint, cleaning chemicals, product benchmarking and Nigeria-linked procurement.",
+    text: "Lagos/Apapa support for marine paint, cleaning chemicals, product benchmarking and Nigeria-linked procurement.",
   },
 ];
 
 const procurementSteps = [
-  "Send the brand lane: Sigma, International, Hempel, Jotun, Unitor or Drew Marine.",
+  "Send the brand or product family: Sigma, International, Hempel, Jotun, Unitor or Drew Marine.",
   "Add quantity, colour/system, surface condition, vessel or Ghana site location.",
   "Morven checks category fit, equivalent options, standards and available documentation.",
-  "Quote, contact route and delivery timing are confirmed for Ghana or Lagos reference needs.",
+  "Receive quote details, contact route and delivery timing for Ghana or Lagos reference needs.",
 ];
 
 const industries = [
@@ -179,8 +179,8 @@ const industries = [
 const proofPoints = [
   "Sigma / International / Hempel / Jotun",
   "Unitor & Drew Marine chemicals",
-  "Ghana-first market positioning",
-  "Lagos/Apapa reference support",
+  "Ghana market coverage",
+  "Lagos/Apapa procurement support",
 ];
 
 const insightCards = [
@@ -244,7 +244,7 @@ export default function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">
-              Ghana supply desk / Lagos reference support
+              Ghana marine supply / Lagos reference support
             </p>
             <h1>Marine Paint & Protective Coatings</h1>
             <p className="hero-lede">
@@ -257,8 +257,8 @@ export default function Home() {
               <a className="button primary" href="#rfq">
                 Request Paint Quote
               </a>
-              <a className="button secondary" href="#category-catalog">
-                View Priority Categories
+              <a className="button secondary" href="#categories">
+                View Product Categories
               </a>
             </div>
             <div className="market-badges" aria-label="Regional market focus">
@@ -268,20 +268,20 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="command-panel" aria-label="Morven regional desk">
+          <aside className="command-panel" aria-label="Morven regional supply summary">
             <div className="panel-header">
-              <span>Priority desk</span>
-              <strong>Ready</strong>
+              <span>Regional supply</span>
+              <strong>Available</strong>
             </div>
             <div className="market-route">
               <div>
-                <span>Category one</span>
+                <span>Paint & coatings</span>
                 <strong>Marine Coatings</strong>
                 <p>Sigma, International, Hempel and Jotun</p>
               </div>
               <div>
-                <span>Category two</span>
-                <strong>Chemicals</strong>
+                <span>Cleaning & maintenance</span>
+                <strong>Marine Chemicals</strong>
                 <p>Unitor and Drew Marine cleaning products</p>
               </div>
             </div>
@@ -294,8 +294,8 @@ export default function Home() {
               ))}
             </div>
             <div className="panel-note">
-              <strong>6 lines</strong>
-              <span>Paint and chemical categories ready for RFQ follow-up</span>
+              <strong>6</strong>
+              <span>Featured paint and chemical categories for quote support</span>
             </div>
           </aside>
         </div>
@@ -317,12 +317,12 @@ export default function Home() {
         <div className="split-heading">
           <div>
             <p className="eyebrow dark">Market coverage</p>
-            <h2>Ghana leads demand. Lagos anchors the reference desk.</h2>
+            <h2>Ghana supply focus with Lagos/Apapa reference support.</h2>
           </div>
           <p>
-            Morven prioritizes marine paint and protective coatings first,
-            then cleaning and maintenance chemicals, while keeping
-            Lagos/Apapa visible for Nigeria-linked procurement.
+            Morven serves marine paint and protective coating requests,
+            alongside cleaning and maintenance chemicals, with Lagos/Apapa
+            available for Nigeria-linked procurement.
           </p>
         </div>
         <div className="market-grid">
@@ -344,8 +344,8 @@ export default function Home() {
         </div>
         <div className="intro-copy">
           <p>
-            Morven Industrial Limited now places the requested marine paint
-            brands and cleaning chemical lines at the center of the page.
+            Morven Industrial Limited brings the core marine paint brands and
+            cleaning chemical lines into one clear starting point.
             Ghanaian buyers can start from the category they need, while Lagos
             remains available as the Nigeria reference for comparison and
             regional supply continuity.
@@ -372,8 +372,8 @@ export default function Home() {
           <p className="eyebrow">Supply without guesswork</p>
           <h2>From coating selection to chemical maintenance supply.</h2>
           <p>
-            The work starts with brand preference, surface condition, vessel or
-            site use, standards and urgency. From there, Morven helps shape the
+            Start with the brand preference, surface condition, vessel or site
+            use, standards and urgency. From there, Morven helps shape the
             RFQ around Sigma, International, Hempel, Jotun, Unitor or Drew
             Marine categories before confirming the supply path.
           </p>
@@ -387,9 +387,9 @@ export default function Home() {
             <h2>Marine coating focus with chemical supply backup.</h2>
           </div>
           <p>
-            Morven can receive a precise product name, a broad brand category
-            or an acceptable-equivalent request, then help buyers move toward a
-            cleaner quote for Ghana and Lagos/Apapa reference needs.
+            Send a precise product name, a broad brand category or an
+            acceptable-equivalent request, and Morven will help shape a clear
+            quote for Ghana with Lagos/Apapa reference support.
           </p>
         </div>
         <div className="service-grid">
@@ -407,12 +407,13 @@ export default function Home() {
         <div className="section product-heading">
           <div className="split-heading light">
             <div>
-              <p className="eyebrow">Priority categories</p>
-              <h2>Push marine paint first. Keep cleaning chemicals close behind.</h2>
+              <p className="eyebrow">Main categories</p>
+              <h2>Marine coatings and cleaning chemicals for demanding environments.</h2>
             </div>
             <p>
-              Start with Painting and Protective Coating, followed by Cleaning
-              and Maintenance Chemicals for marine and heavy-industry users.
+              Paint and Protective Coatings lead the offer, followed by
+              Cleaning and Maintenance Chemicals for marine and heavy-industry
+              users.
             </p>
           </div>
         </div>
@@ -430,7 +431,7 @@ export default function Home() {
                 <span>{product.label}</span>
                 <h3>{product.title}</h3>
                 <p>{product.text}</p>
-                <a href={product.href}>View category focus</a>
+                <a href={product.href}>View Category</a>
               </div>
             </article>
           ))}
@@ -439,13 +440,13 @@ export default function Home() {
 
       <section
         className="section featured"
-        id="category-catalog"
-        aria-label="Priority categories"
+        id="categories"
+        aria-label="Product categories"
       >
         <div className="split-heading">
           <div>
             <p className="eyebrow dark">Product categories</p>
-            <h2>Marine coating and cleaning chemical lines ready for RFQ.</h2>
+            <h2>Marine coating and cleaning chemical lines available for RFQ.</h2>
           </div>
           <p>
             Choose the brand category you need. Morven can help with
@@ -554,7 +555,7 @@ export default function Home() {
         <div className="rfq-panel">
           <div className="rfq-panel-top">
             <strong>RFQ brief</strong>
-            <span>Best response when your list includes:</span>
+            <span>Include these details:</span>
           </div>
           <ul>
             <li>Sigma, International, Hempel or Jotun paint request</li>
